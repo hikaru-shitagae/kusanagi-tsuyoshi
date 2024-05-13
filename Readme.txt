@@ -1,1 +1,1 @@
-これは草彅剛にgitになります。
+initial commit
