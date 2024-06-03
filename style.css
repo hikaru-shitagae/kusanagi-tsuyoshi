@@ -1,11 +1,12 @@
 /* style.css */
 p {
-    color: black;
+    background-color: #000000;
     font-size: 16px;
+    color:#ffffff;
 }
 
 h1 {
-    color: yellow;
+    color: #FFFF00;
 }
 body{
     background-image: url("https://www.cyzo.com/images/kusanagi0703.jpg");
