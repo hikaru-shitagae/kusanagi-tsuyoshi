@@ -1,40 +1,15 @@
 /* style.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 20px;
+p {
+    color: black;
+    font-size: 16px;
 }
 
 h1 {
-    color: #4CAF50;
-    text-align: center;
-    margin-bottom: 20px;
-    
+    color: yellow;
 }
-
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-li {
-    margin: 10px 0;
-}
-
-a {
-    text-decoration: none;
-    color: #2196F3;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #0d47a1;
+body{
+    background-image: url("https://www.cyzo.com/images/kusanagi0703.jpg");
+    background-position: top left;
+    background-size:  cover;
+    background-repeat:  no-repeat;
 }
