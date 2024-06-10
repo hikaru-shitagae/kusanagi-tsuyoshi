@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>好きなお酒のアンケート</title>
+</head>
+<body>
+    <form action="answeralco" method="post">
+    <h1>以下のアンケートにお答えください。</h1>
+    <ul>
+        <li>今どんなお酒が飲みたいですか？</li>
+            <select id="category" name="category" required>
+                <option value="ビール">ビール</option>
+                <option value="ワイン">ワイン</option>
+                <option value="日本酒">日本酒</option>
+                <option value="ウィスキー">ウィスキー</option>
+                <option value="焼酎">焼酎、サワー</option>
+                <optgroup label="カクテル">
+                    <option value="ジン">ジンベース</option>
+                    <option value="ウォッカ">ウォッカベース</option>
+                    <option value="テキーラ">テキーラベース</option>
+                    <option value="ラム">ラムベース</option>
+                    <option value="ブランデー">ブランデーベース</option>
+                </optgroup>
+            </select>
+        <li>どのくらいの度数がお好みですか？</li>
+            <select id="persent" name="persent" required>
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="15">15&</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+                <option value="30">30%</option>
+                <option value="35">35%</option>
+                <option value="40">40%</option>
+                <option value="45">45%</option>
+            </select>
+        <li>甘口と辛口どっちが好きですか？</li>
+            <select id="taste" name="taste">
+                <option value="甘口">甘口</option>
+                <option value="辛口">辛口</option>
+            </select>
+    </ul>
+    <input type="submit" value="送信">
+    </form>
+</body>
+</html>

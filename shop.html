@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h2>居酒屋アンケート</h2>
+        <p>以下のアンケートに答えていただき、最後に「送信」ボタンを押してください。</p>
+        <form method="POST" action="answershop">
+            <ul>
+            <li>どこの居酒屋をお探しですか？</li>
+            <select name="address" required>
+                <optgroup label="天久保">
+                    <option value="天久保1丁目">天久保1丁目</option>
+                    <option value="天久保2丁目">天久保2丁目</option>
+                    <option value="天久保3丁目">天久保3丁目</option>
+                    <option value="天久保4丁目">天久保4丁目</option>
+                </optgroup>
+                <optgroup label="春日">
+                    <option value="春日1丁目">春日1丁目</option>
+                    <option value="春日2丁目">春日2丁目</option>
+                    <option value="春日3丁目">春日3丁目</option>
+                    <option value="春日4丁目">春日4丁目</option>
+                </optgroup>
+            </select>
+            <li>価格帯はどの程度がいいですか？</li>
+            <select name="price" required>
+                <option value="2000~3000">2000~3000円程度</option>
+                <option value="3000~4000">3000~4000円程度</option>
+                <option value="4000~5000">4000~5000円程度</option>
+            </select>
+            <li>7人以上で行きたいですか？</li>
+            <select name="capacity">
+                <option value="可">はい</option>
+                <option value="不可">いいえ</option>
+            </select>
+            <li>どんな雰囲気がいいですか？</li>
+            <select name="mood">
+                <option value="しっとり">しっとり</option>
+                <option value="ワイワイ">ワイワイ</option>
+            </select><br>
+            <input type="submit" value="回答を終える">
+        </form>
+    </body>
+</html>
