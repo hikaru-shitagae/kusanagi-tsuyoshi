@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>草彅剛の酒カスのすすめ</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_alcohol.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='osake.js') }}"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>草彅剛の酒カスのすすめ</h1>
+        <p>ここではあなたの気分にあったお酒や居酒屋を紹介するよ！</p>
+        <p>下のリンクからアンケートに答えてね！</p>
+        <ul>
+            <li><a href="{{ url_for('shop') }}">居酒屋を探したいならこっち！</a></li>
+            <li><a href="{{ url_for('alcohol') }}">お酒を探したいならこっち！</a></li>
+        </ul>
+    </div>
+    <div class="content roulette">
+        <p>今日のお酒ルーレット!</p>
+        <div id="post1"></div>
+        <div id="post2"></div>
+        <input type="button" value="スタート" onclick="startRoulette();">
+        <input type="button" value="ストップ" onclick="stopRoulette();">
+    </div>
+    <script type="application/json" id="data">{{ data|tojson }}</script>
+    <script type="text/javascript">
+        var timer;
+        var isRouletteRunning = false; // ルーレットの状態を示すフラグ
+        let array = JSON.parse(document.getElementById('data').textContent);
+
+        function startRoulette() {
+            if (!isRouletteRunning) { // ルーレットが動いていない場合のみスタート
+                timer = setInterval(drawRoulette, 100);
+                isRouletteRunning = true; // フラグを立てる
+            }
+        }
+
+        function stopRoulette() {
+            if (isRouletteRunning) { // ルーレットが動いている場合のみストップ
+                clearInterval(timer);
+                isRouletteRunning = false; // フラグを下ろす
+            }
+        }
+
+        function drawRoulette() {
+            var value1 = array[Math.floor(Math.random() * array.length)][0];
+            var value2 = array[Math.floor(Math.random() * array.length)][1];
+            var id1 = document.getElementById('post1');
+            var id2 = document.getElementById('post2');
+            id1.style.fontSize = "24pt";
+            id1.style.color = "#FFD700"; // 金色に変更
+            id2.style.fontSize = "24pt";
+            id2.style.color = "#FFD700"; // 金色に変更
+            id1.innerHTML = value1;
+            id2.innerHTML = value2;
+        }
+    </script>
+</body>
+</html>
